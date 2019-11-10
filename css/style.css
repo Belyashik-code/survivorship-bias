@@ -1,0 +1,143 @@
+@media (min-width: 992px)  {
+  h1{
+  font-family: 'Amatic SC';
+  }
+  p{
+  font-family: 'Amatic SC', cursive;
+  font-size: 2rem;
+  }
+  canvas{
+    position: fixed;
+  }
+  footer{
+    position: fixed;
+    height: 40px;
+    width: 100%;
+    background-color: #222;
+     bottom: 0px!important;
+  }
+  .TheBeginning{
+    height: 100%;
+  }
+  .Greeting img{
+    width: 425px;
+    padding-top: 15%;
+  }
+  .Greeting h1{
+    color: #555;
+    font-family: 'Amatic SC';
+  }
+  .classic button{
+    border-style: dashed;
+    font-family: 'Amatic SC';
+    width: 250px;
+    font-size: 2.5rem;
+    margin-top: 10px;
+    border-radius: 25px;
+    outline: 0 none!important;
+  }
+  .classic button:active {
+    transform: scale(0.95, 0.95);
+    border-radius: 25px;
+  }
+  .classic button:hover {
+    transform: scale(1.05, 1.05);
+    border-radius: 25px;
+  }
+  .planeXS{
+    position: absolute;
+    height: 75px;
+    width: auto;
+  }
+  .slide-fade-enter-active {
+  transition: all 1s cubic-bezier(0, 0, 1, 1);
+  }
+  .slide-fade-leave-active {
+    transition: all 1s cubic-bezier(0, 0, 1, 1);
+  }
+  .slide-fade-leave-to {
+    transform: translateX(55px);
+    opacity: 0;
+  }
+  .slide-fade-enter {
+    transform: translateX(-55px);
+    opacity: 0;
+  }
+  .BeginningContinuation{
+
+  }
+  .description h1{
+    padding-top: 25px;
+  }
+  .description img{
+    padding-top: 40px; ;
+    height: 450px;
+    width: auto;
+  }
+  .damagedPlanes img{
+    height: 350px;
+    width: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .bigdata h1{
+    padding-top: 25px;
+  }
+  .borderschemes {
+    border-style: dashed;
+    border-color: #555;
+    border-radius: 25px;
+  }
+  .result h1{
+    padding-top: 25px;
+  }
+  .result p{
+    padding-top: 25px;
+  }
+  .borderschemesbtn button{
+    border-style: dashed;
+    font-family: 'Amatic SC';
+    width: 250px;
+    border-radius: 25px;
+    font-size: 2.5rem;
+    margin-top: 5px;
+    outline: 0 none!important;
+  }
+  .borderschemesbtn button:active {
+    transform: scale(0.95, 0.95);
+    border-radius: 25px;
+  }
+  .borderschemesbtn button:hover {
+    transform: scale(1.05, 1.05);
+    border-radius: 25px;
+  }
+  .successbook h1{
+    padding-top: 25px;
+    font-size: 2.8rem;
+  }
+  .successbook p{
+    padding-top: 10px;
+  }
+  .successbook img{
+    height: 300px;
+  }
+  .TheEnd h1{
+    padding-top: 25px;
+    color: green;
+  }
+  .socials h1{
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 5px;
+  }
+}
+/*
+Mobile version
+Mobile version
+Mobile version
+Mobile version
+Mobile version
+*/
+@media (min-width: 576px) and (max-width: 991px) {
+
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title> Ошибка выжевшего </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<head>
+<body>
+  <canvas id="canvas" width="100%" height="100%"></canvas>
+  <section id="main" class="window">
+    <transition-group name="slide-fade">
+      <div v-show="slide1" class="TheBeginning" key='1'>
+        <div class="container">
+          <div class="row">
+              <div class="col-lg-6 offset-lg-3 align-self-center text-center Greeting classic">
+                <img src="images/planes.png" alt="">
+                <h1>Привет! Я постараюсь с пользой потратить те 10 минут времени, которые ты решил мне уделить!</h1>
+                <p><font style="font-size: 1rem;"> А заодно попробую рассказать, почему все истории и книге об успехе не всегда имеют за собой хоть какой-то смысл:).</font></p>
+                <button type="button" name="button" @click="slider"> Начать! </button>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div v-show="slide2" class="BeginningСontinuation" key=:'2'>
+        <div class="container">
+          <div class="row align-items-end">
+            <div class="col-lg-6 offset-3 text-center description">
+              <h1>Краткий экскурс...</h1>
+            </div>
+            <div class="w-100">
+            </div>
+            <div class="col-lg-4 description">
+              <img src="images/firedplane.png" alt="">
+            </div>
+            <div class="col-lg-6 offset-lg-2 text-center description">
+              <p>
+                  Во времена Второй мировой войны далеко не все самолеты возвращались из боя,
+                  большинству не удавалось выжить под обстрелом вражеских истребителей и зениток.
+                  Перед инженерами тех лет стояла задача усовершенствовать летательные аппараты,
+                  дабы уменьшить потери личного состава, а также заполучить преимущетсво в бою.
+                  И тогда было решено прибегнуть к статистике и систематике...
+              </p>
+            </div>
+            <div class="col-lg-6 offset-lg-3 text-center classic">
+              <button type="button" name="button" @click="slider">Продолжить</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div v-show="slide3" class="schemes" key='3'>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center bigdata">
+              <h1>Big(ExtraSmall!) Data :)</h1>
+            </div>
+            <div class="col-lg-12 row borderschemes">
+              <div class="col-lg-3 damagedPlanes">
+                <img src="images/Slayd1.png" alt="">
+              </div>
+              <div class="col-lg-3 damagedPlanes">
+                <img src="images/Slayd2.png" alt="">
+              </div>
+              <div class="col-lg-3 damagedPlanes">
+                <img src="images/Slayd3.png" alt="">
+              </div>
+              <div class="col-lg-3 damagedPlanes">
+                <img src="images/Slayd4.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-12 row text-center">
+              <p>Итак, перед тобой 4 схемы самолетов, вернувшихся с полей сражения.
+                 Каждый из них получил немало пулевых ранений - попадания отмечены красными точками.
+                 Если немного изучить изображения, то станет понятно, что попадания распределенны таким образом:
+                  <font style="color: green;">Больше всего на фюзеляже и прочих частях</font>; <font style="color: red;">Меньше в топливной системе и намного меньше — в двигателе.</font>
+              </p>
+              <div class="col-lg-4 offset-lg-2 text-center borderschemesbtn">
+                 <button type="button" name="button" @click="exslider"><font style="color: green;">Укрепим фезюляж!</font></button>
+              </div>
+              <div class="col-lg-4 text-center borderschemesbtn">
+                 <button type="button" name="button" @click="slider"><font style="color: red;">Укрепим двигатель!</font></button>
+              </div>
+             </div>
+          </div>
+        </div>
+      </div>
+      <div v-show='slide4' class="opinionresult" key='4'>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center result">
+              <h1 id="choice" style='color: green;'> {{ opinion }} </h1>
+              <div class="col-lg-8 offset-lg-2 text-center result">
+                <p>
+                  Если верить имеющийся статистике попаданий, то самолёты систематически получают попадания в корпус и фюзеляж.
+                  Но эти попадания не являются фатальными! На базу не возвращаются именно те самолёты, которые получили ранения в топливную систему, двигатель или кабину.
+                  Это самый популярный пример <font style="color: red;">"ошибки выжевшего"</font>. Её суть проста: зачастую <font style="color: red;">мы видим только одну сторону монеты,</font>
+                  так как вторую увидеть мы не в состоянии по каким-то причинам.
+                </p>
+              </div>
+              <h1 style="color: green;">Да, но причём тут книги и истории об успехе?</h1>
+              <div class="col-lg-6 offset-lg-3 text-center classic">
+                <button type="button" name="button" @click="slider">Давай разберемся...</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div v-show='slide5' class="successbooks" key='5'>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 offset-lg-2 text-center successbook">
+              <h1>Я думаю <font style="color: green;">ты</font> и сам уже близок к разгадке, а может быть и вовсе <font style="color: green;">все понял</font>.</h1>
+              <p>
+                Самолеты, вернувшиеся из боя, это те самые успешные предпринематели или личности!
+                Как и среди самолетов, мы видим лишь ограниченную выборку мнений (неполную статистику),
+                потому что <font style="color: red;">"прогоревшие" не пишут книг...</font>
+                Хотя их <font style="color: green;">допущенные ошибки имеют не меньший вес, чем успехи</font> "успешных".
+              </p>
+              <img src="images/iceberg.png" alt="">
+            </div>
+            <div class="col-lg-6 offset-lg-3 text-center classic">
+              <button type="button" name="button" @click="slider">Далее...</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div v-show='slide6' class="TheEnd" key='6'>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 offset-lg-3 text-center TheEnd">
+              <h1>Спасибо за уделенное время!</h1>
+              <p>
+                Я <font style="color: green;">очень надеюсь</font>, что <font style="color: green;">смог рассказать тебе что-то новое</font>
+                 и не в пустую потратил твоё время. <br>
+                Моя природная скромность не позволяет высоко оценить свою работу, но <font style="color: green;">если тебе понравлось,</font>
+                и ты бы хотел, чтобы другие мои работы увидели свет, то дай мне знать!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </transition-group>
+      <footer>
+        <div class="socials">
+          <h1>Мои соцсети:</h1>
+          <a href="#"> <img src="images/github.png" alt=""> </a>
+        </div>
+      </footer>
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="js/script.js"> </script>
+  <script src="js/vuescript.js"> </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
