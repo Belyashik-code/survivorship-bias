@@ -2,6 +2,9 @@
   h1{
   font-family: 'Amatic SC';
   }
+  a{
+  font-family: 'Amatic SC';
+  }
   p{
   font-family: 'Amatic SC', cursive;
   font-size: 2rem;
@@ -10,11 +13,6 @@
     position: fixed;
   }
   footer{
-    position: fixed;
-    height: 40px;
-    width: 100%;
-    background-color: #222;
-     bottom: 0px!important;
   }
   .TheBeginning{
     height: 100%;
@@ -125,11 +123,37 @@
     padding-top: 25px;
     color: green;
   }
+  .TheEnd p{
+    padding-top: 25px;
+  }
+  .socials{
+    position: fixed;
+    height: 5%;
+    width: 100%;
+    background-color: #222;
+    bottom: 0px!important;
+  }
   .socials h1{
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 5px;
+  }
+  .socials h1:hover{
+    filter: invert(1);
+    font-size: 1.5rem;
+    padding: 5px;
+  }
+  .socials a{
     color: #fff;
     font-size: 1.5rem;
     padding: 5px;
   }
+  .icons img:hover{
+    filter: invert(1);
+  }
+
+
 }
 /*
 Mobile version
